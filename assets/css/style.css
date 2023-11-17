@@ -1,0 +1,221 @@
+body{
+    background-color: white;
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header{
+    background-color: black;
+    height: 150px;
+}
+
+.logo{
+    margin: 15px 20px;
+}
+
+nav{
+    position: absolute;
+    right: 30px;
+    top: 40px;
+}
+nav li{
+    margin: 0 0 0 10;
+    display: inline;
+}
+nav a{
+    
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.4s;
+}
+nav a:hover{
+    color: #FF914D;
+    /*text-decoration: underline;*/
+}
+
+
+nav{
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+nav li{
+    margin: 0 0 0 30;
+    display: inline;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.4s;
+}
+nav a:hover{
+    color: #FF914D;
+    /*text-decoration: underline;*/
+}
+
+.fundo{
+    width: 100%;
+
+}
+
+.info{
+    top: 35px;
+    left: 600px;
+    position: absolute;
+    
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1 1 calc(33.33% - 20px); /* 33.33% width with some spacing between items */
+  margin: 10px; /* Spacing between items */
+  max-width: 300px; /* Optional: set maximum width for each item */
+}
+
+.busca{
+    background-color: white;
+    font-size: 18;
+    padding-left: 25px;
+    text-align: left;
+    width: 650px;
+    height: 45px;
+    border-radius: 30px;
+    border-color: #FF914D;
+    transition: 0.6s;
+    margin-right: 10px;
+}
+.input:hover{
+    transform: scale(1.1);
+    border-color: #FF914D;
+    transition: 0.6s;
+}
+::placeholder{
+    font-size: 18;
+    color: black;
+}
+
+.logo_caixa{
+    top: 20%; 
+    position: relative;
+}
+.logo{
+    transition: 0.6s;
+}
+.logo :hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+footer{
+    padding: 20px;
+    background-color: black;
+}
+
+.logo_footer{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+}
+
+.copyright{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Cadastro */
+
+
+/* Estilo para as entradas de texto e o botão de envio */
+.inputs-cadastro,
+input[type="submit"] {
+    color: black; /* Define a cor do texto como preto */
+    font-size: 16px; /* Define o tamanho da fonte para 16 pixels, por exemplo */
+    padding: 10px; /* Adiciona preenchimento interno às entradas de texto e botão */
+    box-sizing: border-box; /* Garante que o preenchimento não aumente o tamanho total */
+    width: 250%; /* Define a largura para ocupar todo o espaço disponível */
+    margin-bottom: 15px; /* Adiciona margem na parte inferior para separar os elementos */
+}
+.cor-letras{
+    color: black;
+}
+
+input[type="submit"]{
+    background-color: red;
+}
+
+input[type="submit"]:hover {
+    background-color: #c40404;
+}
+
+.center{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+section#carros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 50px 50px 50px;
+}
+
+.title-alta{
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.carro {
+    width: 400px;
+    margin: 8px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.carro:hover {
+    transform: scale(1.025);
+}
+
+.carro img {
+    width: 100%;
+    height: 65%;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 8px 8px 0 0;
+}
+
+.carro h2 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+    padding-left: 10px;
+}
+
+.carro p {
+    margin: 10px 0;
+    color: #666;
+    padding-left: 10px;
+}
+
+.carro p.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d81b60;
+}

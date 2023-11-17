@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+        <link rel="shortcut icon" href="icon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Senninha Drive</title>
+    </head>
+    <body>
+            <header>
+                <div class="logo_caixa">
+                    <img src="/assets/img/logo.png" alt="insights" width="20%" class="logo">
+                </div>
+                <div class="banner">
+                    <nav class="nav_cadastro">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="carros.html">Carros</a></li>
+                            <li><a href="cadastro.html">Cadastre-se</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="info">
+                        <p>
+                            <input type="text" id="busca" name="busca" class="busca" placeholder="Buscar:">
+                            <br/><br/>
+                        </p>
+                </div>
+            </header>
+        <img src="/assets/img/carroP1.jpg" alt="banner" class="fundo" >
+        <footer>
+
+            <form action="/enviar-contato" method="post">
+                <label for="nome" class="lnome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="div-footer">
+            <img src="/assets/img/logo.png" alt="senninha drive" class="logo_footer">
+            <p class="copyright">&copy; 2023 - Senninha Drive LTDA.</p>
+            </div>
+        </footer>
+    </body>
+</html>
