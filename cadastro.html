@@ -1,8 +1,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="assets/css/cadastro.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/footer.css">
         <link rel="shortcut icon" href="icon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Senninha Drive</title>
@@ -11,82 +11,92 @@
         </script>
     </head>
     <body>
-            <header>
-                <div class="logo_caixa">
-                    <img src="assets/img/logo.png" alt="insights" width="20%" class="logo" >
-                </div>
-                <div class="banner">
-                    <nav class="nav_cadastro">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="carros.html">Carros</a></li>
-                            <li><a href="cadastro.html">Cadastre-se</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="info">
-                        <p>
-                            <input type="text" id="busca" name="busca" class="busca" placeholder="Buscar:">
-                            <br/><br/>                                         
-                        </p>
-                </div>
-            </header>
+        <header class=".topo-site">
+            <div class="logo_caixa">
+                <img src="assets/img/logo.png" alt="logo" width="20%" class="logo">
+            </div>
+            <div class="banner">
+                <nav class="nav_geral">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="carros.html">Carros</a></li>
+                        <li><a href="cadastro.html">Cadastro    </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <h1 th:text="${mensagem2}"></h1>
-            <div class="center">
-                <br/><br/>
-                <form action="respostaForm.html" method="post">
-                    <p>
-                        <label for="fname" class="cor-letras"><strong>Nome:</strong></label>
-                        <input type="text" id="fname" name="fname" class="inputs-cadastro">
-                        <br/><br/>
-                    </p>
-                    <p>
-                        <label for="senha" class="cor-letras"><strong>Senha:</strong></label>
-                        <input type="password" id="senha" name="senha" class="inputs-cadastro">
-                        <br/><br/>
-                    </p>
-                    <p>
-                        <label for="email" class="cor-letras"><strong>Email:</strong></label>
-                        <input type="email" id="email" name="email" class="inputs-cadastro" placeholder="seuemail@email.com">
-                        <br/><br/>
-                    </p>
-                    <p>
-                        <label for="telefone" class="cor-letras"><strong>Telefone:</strong></label>
-                        <input type="tel" id="telefone" name="telefone" class="inputs-cadastro" placeholder="(XX) XXXXX-XXXX">
-                        <br/><br/>
-                    </p>
-                    <p>
-                        <label for="cpf" class="cor-letras"><strong>CPF:</strong></label>
-                        <input type="text" id="cpf" name="cpf" class="inputs-cadastro">
-                        <br/><br/>
-                    </p>
-                    <p class="recuo">
-                        <input type="submit" value="Cadastrar" class="enviar">
-                        <br/><br/>
-                    </p>
-                </form>
-            </div>
+        <div class="container" >
+            <a class="links" id="paracadastro"></a>
+            <a class="links" id="paralogin"></a>
             
-        <footer>
-            <!-- Formulário de Contato -->
-            <form action="/enviar-contato" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+            <div class="content">      
+              <!--FORMULÁRIO DE LOGIN-->
+              <div id="login">
+                <form method="post" action="/respostaForm.html" method="post"> 
+                  <h1>Login</h1> 
+                  <p> 
+                    <label for="email_login">Seu e-mail</label>
+                    <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@contato.com"/>
+                  </p>
+                  
+                  <p> 
+                    <label for="senha_login">Sua senha</label>
+                    <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha123"/> 
+                  </p>
+                  
+                  <p> 
+                    <input type="checkbox" name="manterlogado" id="manterlogado" value=""/> 
+                    <label for="manterlogado">Continuar logado?</label>
+                  </p>
+                  
+                  <p> 
+                    <input type="submit" value="Logar" /> 
+                  </p>
+                  
+                  <p class="link">
+                    Ainda não tem conta?
+                    <a href="#paracadastro">Cadastre-se</a>
+                  </p>
+                </form>
+              </div>
         
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-        
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-        
-                <button type="submit">Enviar</button>
-            </form>
-        
-            <!-- Imagem à direita -->
-            <div class="div-footer">
-            <img src="assets/img/logo.png" alt="senninha drive" class="logo_footer">
-            <p class="copyright">&copy; 2023 - Senninha Drive LTDA.</p>
+              <!--FORMULÁRIO DE CADASTRO-->
+              <div id="cadastro">
+                <form method="post" action="/loginForm.html"> 
+                  <h1>Cadastro</h1> 
+                  
+                  <p> 
+                    <label for="nome_cad">Seu nome</label>
+                    <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Ayrton Senna" />
+                  </p>
+                  
+                  <p> 
+                    <label for="email_cad">Seu e-mail</label>
+                    <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@contato.com"/> 
+                  </p>
+                  
+                  <p> 
+                    <label for="senha_cad">Sua senha</label>
+                    <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="senha123"/>
+                  </p>
+                  
+                  <p> 
+                    <input type="submit" value="Cadastrar"/> 
+                  </p>
+                  
+                  <p class="link">  
+                    Já tem conta?
+                    <a href="#paralogin"> Ir para Login </a>
+                  </p>
+                </form>
+              </div>
             </div>
+          </div>
+          
+        <footer class="footer">
+            <img src="assets/img/logo.png" alt="senninha drive" width="50%" class="logo_footer">
+            <p class="copyright">&copy; 2023 - Senninha Drive LTDA.</p>
         </footer>
     </body>
 </html>
